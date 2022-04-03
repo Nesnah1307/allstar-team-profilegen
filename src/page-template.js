@@ -3,12 +3,12 @@ const generateTeam = team => {
 
     const generateManager = manager => {
         return ` 
-        <div class="card employee-card">
-        <div class="card-header">
+        <div class="allstar">
+        <div class="allstar-header">
             <h2 class="card-title">${manager.getName()}</h2>
             <h3 class="card-title">${manager.getRole()}</h3>
         </div>
-        <div class="card-body">
+        <div class="allstar-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${manager.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
@@ -21,12 +21,12 @@ const generateTeam = team => {
 
     const generateEngineer = engineer => {
         return `
-            <div class="card employee-card">
-        <div class="card-header">
+            <div class="allstar">
+        <div class="allstar-header">
             <h2 class="card-title">${engineer.getName()}</h2>
             <h3 class="card-title">${engineer.getRole()}</h3>
         </div>
-        <div class="card-body">
+        <div class="allstar-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
@@ -39,12 +39,12 @@ const generateTeam = team => {
 
     const generateIntern = intern => {
         return `
-        <div class="card employee-card">
-    <div class="card-header">
+        <div class="allstar">
+    <div class="allstar-header">
         <h2 class="card-title">${intern.getName()}</h2>
         <h3 class="card-title">${intern.getRole()}</h3>
     </div>
-    <div class="card-body">
+    <div class="allstar-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${intern.getId()}</li>
             <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}"></a></li>
