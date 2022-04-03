@@ -5,7 +5,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-const generateAllstarTeam = require("./src/page-template.js");
+const generate = require("./src/page-template.js");
 
 const newAllstars = [];
 const allstarIdArr = [];
@@ -69,6 +69,34 @@ function askManager() {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerNumber);
         newAllstars.push(manager);
         allstarIdArr.push(answers.managerId);
-        addEmployee();
+        otherAllstarTeam();
+    });
+}
+
+
+function otherAllstarTeam() {
+
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "addAllstar",
+            message: "Select which type of allstar team member you'd like to add",
+            choices: [
+                "Engineer",
+                "Intern",
+                "There are no other allstar memebers to add."
+            ]
+        }
+    ]).then(allstarChoice => {
+        switch (allstarChoice.otherAllstarTeam) {
+            case "Engineer":
+                allstarEngineer();
+                break;
+            case "Intern":
+                allstarIntern();
+                break;
+            default:
+                createAllstars();
+        }
     });
 }
