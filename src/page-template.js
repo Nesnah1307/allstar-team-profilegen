@@ -63,7 +63,7 @@ const generateTeam = team => {
         .map(manager => generateManager(manager))
     );
     allStarArr.push(team
-        .filer(employee => employee.getRole() === 'Engineer')
+        .filter(employee => employee.getRole() === 'Engineer')
         .map(engineer => generateEngineer(engineer))
         .join("")
     );
@@ -72,6 +72,8 @@ const generateTeam = team => {
         .map(intern => generateIntern(intern))
         .join("")
     );
+
+    return allStarArr.join("");
 };
 
 
