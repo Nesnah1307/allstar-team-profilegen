@@ -9,9 +9,9 @@ const generateTeam = team => {
             <h3 class="card-title">${manager.getRole()}</h3>
         </div>
         <div class="allstar-body">
-            <ul class="list-group">
+            <ul class="information">
                 <li class="list-group-item">ID: ${manager.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
             </ul>
         </div>
@@ -27,10 +27,10 @@ const generateTeam = team => {
             <h3 class="card-title">${engineer.getRole()}</h3>
         </div>
         <div class="allstar-body">
-            <ul class="list-group">
+            <ul class="information">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}"</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
             </ul>
         </div>
     </div>
@@ -45,9 +45,9 @@ const generateTeam = team => {
         <h3 class="card-title">${intern.getRole()}</h3>
     </div>
     <div class="allstar-body">
-        <ul class="list-group">
+        <ul class="information">
             <li class="list-group-item">ID: ${intern.getId()}</li>
-            <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}"></a></li>
+            <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
             <li class="list-group-item">School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -92,6 +92,11 @@ module.exports = team => {
 </head>
 
 <body>
+    <header>
+        <h1>
+            Allstar Team
+        </h1>
+    </header>
     <div class="container">
         ${generateTeam(team)}
     </div>
