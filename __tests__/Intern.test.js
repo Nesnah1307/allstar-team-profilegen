@@ -1,13 +1,13 @@
 const Intern = require("../lib/Intern");
 
 test("Set school", () => {
-  const elementary = "University of Lemoncello";
-  const allstarIntern = new Intern("Mack", 12, "Mack@bananas.com", elementary);
-  expect(allstarIntern.elementary).toBe(elementary);
+  const school = "University of Lemoncello";
+  const allstarIntern = new Intern("Mack", 12, "Mack@bananas.com", school);
+  expect(allstarIntern.school).toBe(school);
 });
 
 test("Pull school", () => {
-  const elementary = "University of Cheetos";
-  const allstarIntern = new Intern("Brandie", 07, "Brandie@coffee.org", elementary);
-  expect(allstarIntern.getElementary()).toBe(elementary);
+  const school = "University of Cheetos";
+  const allstarIntern = new Intern("Brandie", 67, "Brandie@coffee.org", school);
+  expect(allstarIntern.getSchool()).toBe(school);
 });

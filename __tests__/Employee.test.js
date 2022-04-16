@@ -14,7 +14,7 @@ test("Set name", () => {
 test("Pulls names", () => {
     const name = "Brandie";
     const allstarName = new Employee(name);
-    expect(allstarName.getName()).toBe(testValue);
+    expect(allstarName.getName()).toBe(name);
 });
 
 test("Set email", () => {
@@ -30,14 +30,14 @@ test("Pulls email", () => {
 });
 
 test("Set id", () => {
-    const id = 0506;
+    const id = 6750;
     const allstarId = new Employee("Brandie", id);
     expect(allstarId.id).toBe(id);
 });
 
 
 test("Pull id", () => {
-    const id = 0605;
-    const allstarId = new Employee("Mack", 0605, id);
+    const id = 6605;
+    const allstarId = new Employee("Mack", 6605, id);
     expect(allstarId.getId()).toBe(id);
 });
