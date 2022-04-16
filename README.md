@@ -1,7 +1,11 @@
 # Allstar Team Profile Generator
 
 
-https://user-images.githubusercontent.com/96394025/163683748-10184d4c-e443-4913-a076-3fd52b6abddf.mp4
+
+
+https://user-images.githubusercontent.com/96394025/163686344-240faa3b-3ed1-4e67-8621-ef6658347e15.mp4
+
+
 
 
   ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
